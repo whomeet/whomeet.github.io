@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BeautyTeam | ESLint 使用帮助</title>
+    <meta name="description" content="来一起坐下来谈谈情，聊聊天">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.9b722cf9.css" as="style"><link rel="preload" href="/assets/js/app.715146ed.js" as="script"><link rel="preload" href="/assets/js/8.9745ba75.js" as="script"><link rel="prefetch" href="/assets/js/1.bad846ad.js"><link rel="prefetch" href="/assets/js/2.8d378c83.js"><link rel="prefetch" href="/assets/js/3.2d727424.js"><link rel="prefetch" href="/assets/js/4.6370be92.js"><link rel="prefetch" href="/assets/js/5.3b06a112.js"><link rel="prefetch" href="/assets/js/6.eb58fd94.js"><link rel="prefetch" href="/assets/js/7.c81695f6.js"><link rel="prefetch" href="/assets/js/9.3f52bdfd.js"><link rel="prefetch" href="/assets/js/10.df933c04.js"><link rel="prefetch" href="/assets/js/11.f8886750.js"><link rel="prefetch" href="/assets/js/12.dd86ba29.js"><link rel="prefetch" href="/assets/js/13.002627de.js"><link rel="prefetch" href="/assets/js/14.8b0481b1.js"><link rel="prefetch" href="/assets/js/15.25649813.js"><link rel="prefetch" href="/assets/js/16.03d444d7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9b722cf9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      BeautyTeam
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div><div class="nav-item"><a href="/github/" class="nav-link">GitHub精选</a></div><div class="nav-item"><a href="/weekly/" class="nav-link">Beauty周刊</a></div><div class="nav-item"><a href="/aboutUS/" class="nav-link">About US</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">博客</a></div><div class="nav-item"><a href="/github/" class="nav-link">GitHub精选</a></div><div class="nav-item"><a href="/weekly/" class="nav-link">Beauty周刊</a></div><div class="nav-item"><a href="/aboutUS/" class="nav-link">About US</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>首页</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/home/" class="sidebar-link">Home</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>博客</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>github精选</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Beauty周刊</span><span class="arrow right"></span></p><!----></div></li><li><a href="/aboutUS/" class="sidebar-link">关于我们</a></li></ul></div><div class="page"><div class="content"><h3 id="eslint-使用帮助"><a href="#eslint-使用帮助" aria-hidden="true" class="header-anchor">#</a> ESLint 使用帮助</h3><h4 id="推荐使用vscode，本文档使用vscode进行说明，其他编辑器自行处理"><a href="#推荐使用vscode，本文档使用vscode进行说明，其他编辑器自行处理" aria-hidden="true" class="header-anchor">#</a> 推荐使用<code>VSCode</code>，本文档使用<code>VSCode</code>进行说明，其他编辑器自行处理</h4><h4 id="规则使用eslint-config-alloy规范，如对此规范不了解可点击这里查看"><a href="#规则使用eslint-config-alloy规范，如对此规范不了解可点击这里查看" aria-hidden="true" class="header-anchor">#</a> 规则使用<code>eslint-config-alloy</code>规范，如对此规范不了解<a href="https://github.com/AlloyTeam/eslint-config-alloy" target="_blank" rel="noopener noreferrer">可点击这里查看</a></h4><hr><p>1.在扩展中安装ESLint插件</p><p>2.添加<code>eslint-config-alloy</code></p><pre class="language-text"><code>npm install --save-dev eslint babel-eslint eslint-config-alloy
+
+with vue:
+
+npm install --save-dev eslint babel-eslint vue-eslint-parser@2.0.1-beta.2 eslint-plugin-vue@3 eslint-config-alloy
+
+with TypeScript
+
+npm install --save-dev eslint typescript typescript-eslint-parser eslint-plugin-typescript eslint-config-alloy
+
+</code></pre><p>3.添加<code>.eslintrc</code>和<code>.eslintignore</code>文件</p><p>.eslintrc:</p><pre class="language-text"><code>module.exports = {
+    extends: [
+        //'eslint-config-alloy',
+        // 如果是vue则使用这个
+        //'eslint-config-alloy/vue',
+        // 如果是react则使用这个
+        //'eslint-config-alloy/react'
+    ],
+    globals: {
+        // 这里填入你的项目需要的全局变量
+        // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
+        //
+        // jQuery: false,
+        // $: false
+    },
+    rules: {
+    	// 推荐新项目不要打开规则，尽量去适应这份规则
+        // &quot;vue/order-in-components&quot;: &quot;off&quot;,
+        // 关闭强制使用&quot;===&quot;
+        // &quot;eqeqeq&quot;: [&quot;off&quot;],
+        // 关闭函数名前空格检测
+        // &quot;space-before-function-paren&quot;: ['off'],
+        // 允许使用for-in
+        &quot;guard-for-in&quot;: ['off'],
+        // debugger
+        // &quot;no-debugger&quot;: ['off']
+    }
+};
+</code></pre><p>.eslintignore:</p><pre class="language-text"><code>/build
+/dist
+...不使用规则检查的文件
+</code></pre><p>4.在<code>VSCode</code>设置里打开eslint检查与保存时自动修复</p><pre class="language-text"><code>    &quot;eslint.autoFixOnSave&quot;: true,
+    &quot;eslint.validate&quot;: [
+        &quot;javascript&quot;,
+        &quot;javascriptreact&quot;,
+        &quot;html&quot;,
+        {
+            &quot;language&quot;: &quot;vue&quot;,
+            &quot;autoFix&quot;: true
+        },
+        {
+            &quot;language&quot;: &quot;typescript&quot;,
+            &quot;autoFix&quot;: true
+        },
+        {
+            &quot;language&quot;: &quot;typescriptreact&quot;,
+            &quot;autoFix&quot;: true
+        }
+    ],
+    &quot;eslint.enable&quot;: true
+</code></pre><p>5.如果某些代码不想使用某些规则来规范，可以在代码前添加注释，例如：</p><pre class="language-text"><code>/* eslint-disable no-new */
+	
+或
+	
+/* eslint-disable */
+</code></pre><p>6.推荐不要分号（<a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank" rel="noopener noreferrer">英文好可以看这篇讲解</a>）。</p><p>7.推荐使用eslint来规范代码，对于多人合作开发，极大的提高工作效率，不用去阅读“烂代码”是多么的清爽。推荐尽量去适应这份规则，如果配置不好，也可以参考<a href="http://www.alloyteam.com/2017/08/13065/" target="_blank" rel="noopener noreferrer">AlloyTeam ESLint 配置指南</a></p></div><!----><!----></div></div></div>
+    <script src="/assets/js/8.9745ba75.js" defer></script><script src="/assets/js/app.715146ed.js" defer></script>
+  </body>
+</html>
